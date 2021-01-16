@@ -1,0 +1,31 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: DeptProvider
+  datasource:
+    url:  jdbc:mysql://192.168.56.100:3306/scd02?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driverClassName: com.mysql.jdbc.Driver
+  profiles:
+    active: dev
+    
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/, http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: DeptProvider9002
+    
+
+info: 
+  app.name: DeptProvider9002
