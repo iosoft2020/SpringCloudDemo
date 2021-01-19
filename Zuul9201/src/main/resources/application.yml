@@ -1,0 +1,27 @@
+server:
+  port: 9201
+spring:
+  application:
+    name: Zuul
+
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/, http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: Zuul
+    prefer-ip-address: true
+    
+    
+    
+info: 
+  app.name: Zuul
+
+zuul:
+  routes:
+    mydept.serviceId: deptprovider
+    mydept.path: /mydept/**
+  ignored-services: #ignored all '*'
+  - deptprovider
+  prefix: /iosoft

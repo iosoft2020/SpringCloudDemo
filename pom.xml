@@ -99,5 +99,6 @@
 		<module>DeptConsumer9102_Feign</module>
 		<module>DeptProviderHystrix9001</module>
 		<module>DeptConsumerHystrixDashBoard9103</module>
+		<module>Zuul9201</module>
 	</modules>
 </project>
