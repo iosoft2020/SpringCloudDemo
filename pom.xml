@@ -100,5 +100,7 @@
 		<module>DeptProviderHystrix9001</module>
 		<module>DeptConsumerHystrixDashBoard9103</module>
 		<module>Zuul9201</module>
+		<module>ConfigServer9301</module>
+		<module>ConfigClient9302</module>
 	</modules>
 </project>

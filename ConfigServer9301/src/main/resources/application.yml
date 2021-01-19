@@ -1,0 +1,22 @@
+server:
+  port: 9301
+spring:
+  application:
+    name: ConfigService
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/iosoft2020/SpringCloudConfig.git
+          default-label: main
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+        
+        
+#http://localhost:9301/application-dev.yml
+#http://localhost:9301/application-test.yml
+#http://localhost:9301/application/test

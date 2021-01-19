@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ConfigClent
+  cloud:
+    config:
+      uri: http://localhost:9301
+      name: application-client
+      profile: dev
+      label: main
+      #fail-fast: true
