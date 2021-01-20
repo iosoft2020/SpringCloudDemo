@@ -102,5 +102,6 @@
 		<module>Zuul9201</module>
 		<module>ConfigServer9301</module>
 		<module>ConfigClient9302</module>
+		<module>Gateway9202</module>
 	</modules>
 </project>

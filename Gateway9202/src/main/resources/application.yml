@@ -1,0 +1,28 @@
+server:
+  port: 9202
+spring:
+  application:
+    name: Gateway
+  cloud: 
+    gateway:
+      routes:
+        - id: dept_route
+          uri: lb://DEPTPROVIDER
+          predicates:
+          - Path=/dept/**
+          filters:
+          - RewritePath=/dept/(?<segment>.*),/dept/$\{segment}
+#api 可作为统一访问路径
+#http://localhost:9202/dept/list
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/, http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: Gateway
+    prefer-ip-address: true
+    
+    
+info: 
+  app.name: Gateway
